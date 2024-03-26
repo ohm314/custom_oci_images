@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  tasks:
+  - name: Install Torch and Ray
+    pip:
+      name:
+        - numpy
+        - torch
+        - "ray[data,train,tune,serve]"
+      virtualenv: /home/opc/venv
+      virtualenv_command: /usr/bin/python3.11 -m venv

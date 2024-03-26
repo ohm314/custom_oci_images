@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  tasks:
+  - name: Python installation
+    dnf:
+      name:
+        - python3.11
+        - python3.11-pip
+      state: latest
